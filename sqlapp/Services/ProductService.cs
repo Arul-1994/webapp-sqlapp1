@@ -15,7 +15,9 @@ namespace sqlapp.Services
         private SqlConnection GetConnection()
         {
 
-            return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
+            //return new SqlConnection(_configuration.GetConnectionString("SQLConnection"));
+            return new SqlConnection(_configuration.GetConnectionString("Server=tcp:dotnetwebapp01.database.windows.net,1433;Initial Catalog=firstdotnet;Persist Security Info=False;User ID=arpalani;Password=Makayala@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+            
         }
         public List<Product> GetProducts()
         {
